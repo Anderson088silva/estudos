@@ -283,20 +283,71 @@ body.dark .search-field i{
 
     .nav-links li a{
         display: block;
-        margin-top: 20px;
+        margin-top: 0px;
     }
 }
 
-.jumbotron{
+.h1{
     margin-top: 75px;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.display-1{
-    font-style: italic;
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+}        
+
+.div-transform{
+    display: flex;
+    transform: rotateX(100deg) rotateY(15deg) rotateZ(-9deg) scale(1, 1, -0.9) scale(1.1) translateX(50pxS);
 }
 
-.background-image{
-    margin-top: 50px;
+.card{
+    background: url(data:image/jpeg;base64,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) center;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0 px 18px;
+    width: 244px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+
+.card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+width: 100%;
+height: 100%;
+opacity: 0.85;
+}
+
+.card h4{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+
+}
+ 
+.card-1{
+    background-clip: cover;
+    transform: scale(1.02);
+    margin-right: 48px;
+
+}
+
+.card-1:hover{
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+}
+
+card-1::before{
+    background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%)
 }
