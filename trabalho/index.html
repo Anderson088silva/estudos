@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,119 +8,160 @@
     <link rel="stylesheet" href="style.css">
     <title>Etec News</title>
 </head>
-<body>
-     <!-- ===== Boxicons CSS ===== -->
-     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-     <!--<title>Responsive Navigation Menu Bar</title>-->
- </head>
- <body>
-     <nav>
-         <div class="nav-bar">
-             <i class='bx bx-menu sidebarOpen' ></i>
-             <span class="logo navLogo"><a href="#">Etec News</a></span>
- 
-             <div class="menu">
-                 <div class="logo-toggle">
-                     <span class="logo"><a href="#">CodingLab</a></span>
-                     <i class='bx bx-x siderbarClose'></i>
-                 </div>
- 
-                 <ul class="nav-links">
-                     <li><a href="#">Página Inicial</a></li>
-                     <li><a href="#">Noticias</a></li>
-                     <li><a href="#">Destaque do mês</a></li>
-                     <li><a href="#">Contato</a></li>
-                     <li><a href="#">Fale conosco</a></li>
-                 </ul>
-             </div>
- 
-             <div class="darkLight-searchBox">
-                 <div class="dark-light">
-                     <i class='bx bx-moon moon'></i>
-                     <i class='bx bx-sun sun'></i>
-                 </div>
- 
-                 <div class="searchBox">
-                    <div class="searchToggle">
-                     <i class='bx bx-x cancel'></i>
-                     <i class='bx bx-search search'></i>
+<body>
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-bar">
+                <i class='bx bx-menu sidebarOpen'></i>
+                <span class="logo navLogo"><a href="#">Etec News</a></span>
+
+                <div class="menu">
+                    <div class="logo-toggle">
+                        <span class="logo"><a href="#">CodingLab</a></span>
+                        <i class='bx bx-x siderbarClose'></i>
                     </div>
- 
-                     <div class="search-field">
-                         <input type="text" placeholder="Search...">
-                         <i class='bx bx-search'></i>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </nav>
- 
- <script>
- 
- const body = document.querySelector("body"),
-       nav = document.querySelector("nav"),
-       modeToggle = document.querySelector(".dark-light"),
-       searchToggle = document.querySelector(".searchToggle"),
-       sidebarOpen = document.querySelector(".sidebarOpen"),
-       siderbarClose = document.querySelector(".siderbarClose");
- 
-       let getMode = localStorage.getItem("mode");
-           if(getMode && getMode === "dark-mode"){
-             body.classList.add("dark");
-           }
- 
- // js code to toggle dark and light mode
-       modeToggle.addEventListener("click" , () =>{
-         modeToggle.classList.toggle("active");
-         body.classList.toggle("dark");
- 
-         // js code to keep user selected mode even page refresh or file reopen
-         if(!body.classList.contains("dark")){
-             localStorage.setItem("mode" , "light-mode");
-         }else{
-             localStorage.setItem("mode" , "dark-mode");
-         }
-       });
- 
- // js code to toggle search box
-         searchToggle.addEventListener("click" , () =>{
-         searchToggle.classList.toggle("active");
-       });
-  
-       
- //   js code to toggle sidebar
- sidebarOpen.addEventListener("click" , () =>{
-     nav.classList.add("active");
- });
- 
- body.addEventListener("click" , e =>{
-     let clickedElm = e.target;
- 
-     if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-         nav.classList.remove("active");
-     }
- });
- </script>
-  
-  <div class="container">
-      <div class="div-transform">
-          <div class="card card-1">
-            <h2>Noticias da semana</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ipsum expedita minima iste quam nemo maxime, odit sint magnam nisi, facere facilis sequi. Sequi, saepe error officia vero magni unde.
-            </p>
-          </div>
-      </div>
-  </div>
-  <div class="container">
-    <div class="div-transform">
-        <div class="card card-1">
-          <h2>Noticia</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis doloribus cumque dolore voluptates asperiores cum rerum ex aperiam eveniet vero. Consectetur impedit optio aspernatur ullam voluptates dolor sunt magnam ut!</p>
-       <h4>Element</h4> 
-      </div>
-    </div>
-</div>
-</body>
+
+                    <ul class="nav-links">
+                        <li><a href="#">Página Inicial</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Destaque do mês</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Fale conosco</a></li>
+                    </ul>
+                </div>
+
+                <div class="darkLight-searchBox">
+                    <div class="dark-light">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+
+                        <div class="search-field">
+                            <input type="text" placeholder="Search...">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class=" jumbotron bg-anderson ">
+            <h1 class=" display-1 "> Noticias Já </h1>
+            <p class=" lead "> As melhores noticias do mundo para Você </p>
+            <hr classe=" meu-2 ">
+        </div>
+
+        <h1 class="d-flex justify-content-center bg-white ">Nossos Cursos Veja os cursos que serão oferecidos neste vestibulinho do 2º Semestre</h1>
+        <hr>
+        <!-- Estrutura para receber as noticias Secundarias -->
+        <div class="container-fluid">
+            <div class="row mt-3 ">
+                <div class=" col-sm-4 col-md-4">
+                    <img class="img-fluid" src="Imagens/sem foto.jpg">
+                </div>
+
+                <div class="col-sm-8 col-md-8">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.
+                </div>
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-4 col-md-4">
+                <img class="img-fluid" src="Imagens/sem foto.jpg">
+            </div>
+
+            <div class="col-sm-8 col-md-8">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.
+            </div>
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-4 col-md-4">
+                <img class="img-fluid" src="Imagens/sem foto.jpg">
+            </div>
+
+            <div class="col-sm-8 col-md-8">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.
+            </div>
+
+        </div>
+        </div>
+        <!--Estrutura noticia principal-->
+        <div class="col-12 col-sm-6 col-md-6">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6">
+                        <img class="img-fluid" src="Imagens/sem foto.jpg">
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in expedita, voluptatum excepturi eius pariatur ex. Incidunt perferendis temporibus, doloremque ex quaerat voluptatem, libero doloribus, totam officiis placeat excepturi. Lorem, ipsum dolor
+                        sit amet consectetur adipisicing elit. Voluptates, nulla id ab distinctio delectus minus quia nam, commodi dolorum ea voluptate omnis est eveniet, asperiores esse provident nostrum tempora! Fuga?
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            const body = document.querySelector("body"),
+                nav = document.querySelector("nav"),
+                modeToggle = document.querySelector(".dark-light"),
+                searchToggle = document.querySelector(".searchToggle"),
+                sidebarOpen = document.querySelector(".sidebarOpen"),
+                siderbarClose = document.querySelector(".siderbarClose");
+
+            let getMode = localStorage.getItem("mode");
+            if (getMode && getMode === "dark-mode") {
+                body.classList.add("dark");
+            }
+
+            // js code to toggle dark and light mode
+            modeToggle.addEventListener("click", () => {
+                modeToggle.classList.toggle("active");
+                body.classList.toggle("dark");
+
+                // js code to keep user selected mode even page refresh or file reopen
+                if (!body.classList.contains("dark")) {
+                    localStorage.setItem("mode", "light-mode");
+                } else {
+                    localStorage.setItem("mode", "dark-mode");
+                }
+            });
+
+            // js code to toggle search box
+            searchToggle.addEventListener("click", () => {
+                searchToggle.classList.toggle("active");
+            });
+
+
+            //   js code to toggle sidebar
+            sidebarOpen.addEventListener("click", () => {
+                nav.classList.add("active");
+            });
+
+            body.addEventListener("click", e => {
+                let clickedElm = e.target;
+
+                if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
+                    nav.classList.remove("active");
+                }
+            });
+        </script>
+
+
+    </body>
+
 </html>
