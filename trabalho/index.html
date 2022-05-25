@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Etec News</title>
 </head>
 
@@ -37,24 +38,18 @@
                     </ul>
                 </div>
 
-                <div class="darkLight-searchBox">
-                    <div class="dark-light">
-                        <i class='bx bx-moon moon'></i>
-                        <i class='bx bx-sun sun'></i>
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
                     </div>
 
-                    <div class="searchBox">
-                        <div class="searchToggle">
-                            <i class='bx bx-x cancel'></i>
-                            <i class='bx bx-search search'></i>
-                        </div>
-
-                        <div class="search-field">
-                            <input type="text" placeholder="Search...">
-                            <i class='bx bx-search'></i>
-                        </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
                     </div>
                 </div>
+            </div>
             </div>
         </nav>
         <div class=" jumbotron bg-anderson ">
@@ -63,55 +58,17 @@
             <hr classe=" meu-2 ">
         </div>
 
-
-        <h1 class="<i class=" fa fa-align-justify " aria-hidden="true "></i>">Bem vindos ao site das noticias oficiais da etec</h1>
-
-
         <script>
-            const body = document.querySelector("body"),
-                nav = document.querySelector("nav"),
-                modeToggle = document.querySelector(".dark-light"),
-                searchToggle = document.querySelector(".searchToggle"),
-                sidebarOpen = document.querySelector(".sidebarOpen"),
-                siderbarClose = document.querySelector(".siderbarClose");
-
-            let getMode = localStorage.getItem("mode");
-            if (getMode && getMode === "dark-mode") {
-                body.classList.add("dark");
-            }
-
-            // js code to toggle dark and light mode
-            modeToggle.addEventListener("click", () => {
-                modeToggle.classList.toggle("active");
-                body.classList.toggle("dark");
-
-                // js code to keep user selected mode even page refresh or file reopen
-                if (!body.classList.contains("dark")) {
-                    localStorage.setItem("mode", "light-mode");
-                } else {
-                    localStorage.setItem("mode", "dark-mode");
-                }
-            });
-
-            // js code to toggle search box
-            searchToggle.addEventListener("click", () => {
-                searchToggle.classList.toggle("active");
-            });
+            searchToggle = document.querySelector(".searchToggle"),
 
 
-            //   js code to toggle sidebar
-            sidebarOpen.addEventListener("click", () => {
-                nav.classList.add("active");
-            });
-
-            body.addEventListener("click", e => {
-                let clickedElm = e.target;
-
-                if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
-                    nav.classList.remove("active");
-                }
-            });
+                // js code to toggle search box
+                searchToggle.addEventListener("click", () => {
+                    searchToggle.classList.toggle("active");
+                });
         </script>
+        <h1 class="d-flex justify-content-center">Noticias</h1>
+        <hr>
 
 
     </body>

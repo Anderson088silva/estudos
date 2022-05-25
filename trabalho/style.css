@@ -12,8 +12,8 @@
 
 :root {
     --body-color: #E4E9F7;
-    --nav-color: #4070F4;
-    --side-nav: #010718;
+    --nav-color: #ff0606;
+    --side-nav: #0648ff;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #010718;
@@ -288,8 +288,8 @@ body.dark .search-field i {
 }
 
 .bg-anderson {
-    background: url(https://as2.ftcdn.net/v2/jpg/02/74/49/63/1000_F_274496350_F4skvOmhYr7eUq9kZme7CwxJJbw0GmUM.jpg);
+    background: url(https://previews.123rf.com/images/nattyblissful/nattyblissful2001/nattyblissful200100056/136850199-news-update-online-news-news-website-newspaper-flat-style-vector-illustration-people-characters-with.jpg);
     background-position: center;
     background-size: cover;
-    height: 100vh
+    height: 100vh;
 }
